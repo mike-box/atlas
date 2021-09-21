@@ -22,5 +22,14 @@ module.exports = {
   siteMetadata,
 
   /* Your site config here */
-  plugins: [],
+  plugins: [
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'setting',
+        path: `${__dirname}/seeds`,
+      }
+    },
+  ],
+
 }

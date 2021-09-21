@@ -40,6 +40,52 @@ query MyQuery {
 }
 ```
 
+### 添加 `Sourcing Data` `gatsby-source-filesystem`
+
+- CLI
+
+```
+yarn add gatsby-source-filesystem
+```
+
+- 增加和 `src` 目录平级的 `seeds` 目录，并创建一个 `markdown` 文件
+
+- `gatsby-config.js`
+
+```
+  plugins: [
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'setting',
+        path: `${__dirname}/seeds`,
+      }
+    },
+
+    ...
+
+  ],
+
+```
+
+- `http://localhost:8000/___graphql`
+
+```
+query MyQuery {
+  allFile {
+    nodes {
+      size
+      root
+      sourceInstanceName
+      name
+      absolutePath
+      dir
+      ext
+    }
+  }
+}
+```
+
 ## 20210918
 
 ### 创建基于 GatsbyJS 的第一个博客模版
