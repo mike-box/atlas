@@ -86,6 +86,53 @@ query MyQuery {
 }
 ```
 
+### 添加 `Sourcing Data` `gatsby-source-git`
+
+- CLI
+
+```
+yarn add gatsby-source-git
+```
+
+- `gatsby-config.js`
+
+```
+  plugins: [
+    
+    ...
+
+    {
+      resolve: `gatsby-source-git`,
+      options: {
+        name: `repo-notebook`,
+        remote: `https://github.com/we-ready/notebook.git`,
+        branch: `master`,
+        patterns: [`**/*.md`],
+      }
+    },
+
+    ...
+
+  ],
+
+```
+
+- `http://localhost:8000/___graphql`
+
+```
+query MyQuery {
+  allFile {
+    nodes {
+      size
+      sourceInstanceName
+      name
+      absolutePath
+      ext
+    }
+  }
+}
+```
+
 ## 20210918
 
 ### 创建基于 GatsbyJS 的第一个博客模版

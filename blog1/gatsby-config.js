@@ -30,6 +30,15 @@ module.exports = {
         path: `${__dirname}/seeds`,
       }
     },
+    {
+      resolve: `gatsby-source-git`,
+      options: {
+        name: `repo-notebook`,
+        remote: `https://github.com/we-ready/notebook.git`,
+        branch: `master`,
+        patterns: [`**/*.md`],
+      }
+    },
   ],
 
 }
