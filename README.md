@@ -205,6 +205,26 @@ query MyQuery {
 }
 ```
 
+### `styled-components`
+
+- CLI
+
+```
+yarn add styled-components gatsby-plugin-styled-components babel-plugin-styled-components
+```
+
+- `gatsby-config.js`
+
+```
+module.exports = {
+  plugins: [
+    'gatsby-plugin-styled-components',
+
+    ...
+  ],
+}
+```
+
 ## 20210918
 
 ### 创建基于 GatsbyJS 的第一个博客模版
