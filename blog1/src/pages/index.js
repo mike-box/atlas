@@ -1,5 +1,6 @@
 import React from "react"
 import styled from 'styled-components'
+import { WebPageHead } from '../components'
 
 const Container = styled.div`
   width: 100%;
@@ -20,6 +21,7 @@ const Button = styled.button`
 export default function Home() {
   return (
     <Container>
+      <WebPageHead context={{ title: '首页' }} />
       <div>Hello world!</div>
       <Button>Click Me</Button>
     </Container>
