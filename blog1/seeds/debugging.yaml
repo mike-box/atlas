@@ -1,0 +1,20 @@
+---
+version: 1
+format: CONTENT_INFO
+data:
+  - serial_code: INFO_HOME
+    tree_path: 首页.页面
+    category: CT_INFORMATION
+    title: 上海浦东新区浦南医院
+    richtext:
+      type: HTML
+      data: |
+        <p>hellow world</p>
+  - serial_code: INFO_CONTACT_US
+    tree_path: 首页.联系方式
+    category: CT_INFORMATION
+    title: 联系方式
+    richtext:
+      type: HTML
+      data: |
+        <p>hellow world</p>

@@ -39,6 +39,11 @@ module.exports = {
         patterns: [`**/*.md`],
       }
     },
+
+    'gatsby-transformer-yaml',
+    'gatsby-transformer-excel',
+    'gatsby-transformer-remark',
+
   ],
 
 }

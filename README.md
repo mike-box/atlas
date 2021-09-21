@@ -133,6 +133,78 @@ query MyQuery {
 }
 ```
 
+### 添加 `transformer`
+
+- CLI
+
+```
+yarn add gatsby-transformer-excel gatsby-transformer-remark gatsby-transformer-yaml
+```
+
+- `gatsby-config.js`
+
+```
+  plugins: [
+    
+    ...
+
+    'gatsby-transformer-yaml',
+    'gatsby-transformer-excel',
+    'gatsby-transformer-remark',
+  ]
+```
+
+- 在 `seeds` 目录中创建 `yaml` 文件和 `exlx` 文件
+
+> `excel` 的第一行，需要填写英文，否则 `transformer` 将无法识别
+
+- `http://localhost:8000/___graphql`
+
+```
+query MyQuery {
+  allMarkdownRemark {
+    nodes {
+      html
+      fileAbsolutePath
+      frontmatter {
+        author
+        category
+        cover
+        id
+        created_when(formatString: "YYYY-MM-DD")
+      }
+    }
+  }
+}
+```
+
+```
+query MyQuery {
+  allSeedsYaml {
+    nodes {
+      data {
+        category
+        title
+        tree_path
+        serial_code
+      }
+    }
+  }
+}
+```
+
+```
+query MyQuery {
+  allDebuggingXlsxSheet1 {
+    nodes {
+      age
+      name
+      id
+    }
+  }
+}
+```
+
 ## 20210918
 
 ### 创建基于 GatsbyJS 的第一个博客模版
