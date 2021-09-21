@@ -3,6 +3,43 @@
 
 # Logs
 
+## 20210921
+
+### 添加 siteMetadata
+
+- `gatsby-config.js`
+
+```
+const siteMetadata = { ... };
+
+module.exports = {
+  
+  siteMetadata,
+ 
+  ...
+
+}
+```
+
+- `http://localhost:8000/___graphql`
+
+```
+query MyQuery {
+  site(siteMetadata: {}) {
+    siteMetadata {
+      title
+      description
+      author
+      copyright
+      contact {
+        email
+        phone
+      }
+    }
+  }
+}
+```
+
 ## 20210918
 
 ### 创建基于 GatsbyJS 的第一个博客模版
