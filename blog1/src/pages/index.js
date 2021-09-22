@@ -1,29 +1,23 @@
 import React from "react"
+import { Link } from 'gatsby';
 import styled from 'styled-components'
 import { WebPageHead } from '../components'
+import GlobalStyle from "../global.styled";
 
 const Container = styled.div`
-  width: 100%;
   height: 100vh;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
   gap: 1em;
-`
-const Button = styled.button`
-  padding: 1em 1.5em;
-  font-weight: 700;
-  cursor: pointer;
 `
 
 export default function Home() {
   return (
-    <Container>
-      <WebPageHead context={{ title: '首页' }} />
-      <div>Hello world!</div>
-      <Button>Click Me</Button>
-    </Container>
+    <>
+      <GlobalStyle />
+      <Container className="flex-center align-center direction-col debug">
+
+        <WebPageHead context={{ title: '首页' }} />
+        <Link to="uispec">UI Spec</Link>
+      </Container>
+    </>
   )
 }
