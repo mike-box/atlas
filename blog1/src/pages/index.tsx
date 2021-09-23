@@ -16,13 +16,13 @@ const ContentArea = styled.div`
 `;
 
 const MENU_ITEMS = [
-  { key: '1', title: 'Menu 1', },
-  { key: '2', title: 'Menu 2', items: [
+  { key: 'spec',  title: 'UI Spec', linkTo: '/uispec'},
+  { key: 'a',     title: 'Menu 1', },
+  { key: 'b',     title: 'Menu 2', items: [
     { key: '2.1', title: '2.1', },
     { key: '2.2', title: '2.2', },
   ]},
-  { key: '3', title: 'UI Spec', linkTo: '/uispec'},
-  { key: '4', title: 'Menu 4', items: [
+  { key: '4',     title: 'Menu 4', items: [
     { key: '4.1', title: '4.1', },
     { key: '4.2', title: '4.2', },
     { key: '4.3', title: '4.3', },
