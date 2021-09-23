@@ -13,6 +13,7 @@ export const ContentArea = styled.div`
 export const MENU_ITEMS = [
   { key: '0', title: 'Home',        linkTo: '/'},
   { key: '1', title: 'Typography',  linkTo: '/uispec'},
-  { key: '2', title: 'Shape',       linkTo: '/uispec/shape'},
-  { key: '3', title: 'Color',       linkTo: '/uispec/color'},
+  { key: '2', title: 'Color',       linkTo: '/uispec/color'},
+  { key: '3', title: 'Shape',       linkTo: '/uispec/shape'},
+  { key: '4', title: 'Buttons',     linkTo: '/uispec/buttons'},
 ]
